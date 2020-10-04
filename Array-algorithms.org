@@ -1,0 +1,15 @@
+Array Algorithms
+
+* Intersection of two arrays
+
+** Solution 1:
+
+*** Create a hashtable to store elements of array 1 with count O(n)
+*** Create a hashtable to store elements of array 2 with count O(m)
+**** Total of O(m+n)
+*** Compare two arrays O(m*n)
+** Questions
+*** Not memory to load array 2
+*** What if array 1 smaller than array 2
+*** What if arrays sorted
+
