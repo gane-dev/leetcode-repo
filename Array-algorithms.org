@@ -13,3 +13,20 @@ Array Algorithms
 *** What if array 1 smaller than array 2
 *** What if arrays sorted
 
+* Plus one
+
+** Solution 1: Recursive solution
+
+*** Add 1 to last element,   
+*** if element is not 9, done
+*** else recursive call to all one to previous element
+*** If it is first element and 9, insert 1 in front
+
+* Medium
+** Set matrix o zeroes
+*** Keep flag in first element of each row and column (0,0) (0,1) (0,2) (1,0) (2,0)
+** Increasing subsequences
+*** Loop through array and create map
+**** In map, use array as value which holds any value greater than key value
+**** if current value greater than any value in array, return true
+**** First time - Add array in map, if second value greater than first value
