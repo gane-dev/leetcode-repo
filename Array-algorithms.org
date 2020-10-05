@@ -30,3 +30,10 @@ Array Algorithms
 **** In map, use array as value which holds any value greater than key value
 **** if current value greater than any value in array, return true
 **** First time - Add array in map, if second value greater than first value
+** Permutation - backtracking
+*** Return array of arrays
+*** Take each element from input and add to array
+*** If array of length = size of input, add array to result set
+*** After reach end of array, backtrack to previous non complete permutation combination
+*** Try add element to permutation as long as element did not exists
+*** Else backtrack to previous non complete set
