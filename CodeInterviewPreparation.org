@@ -1,0 +1,38 @@
+* How to do code interview (40 minutes, 2 questions)
+** Understand the question, take time come up with strategy
+*** TODO Identify various strategy by going through leetcode and github
+** Come up with a solution, don't worry about optimization in the beginning
+** Tell interviewer about your assumption
+*** ask if any information is missing
+*** Like array sorted or not
+*** Explain your understanding and if anything need to be corrected
+*** Write down your understanding in coderpad
+*** Focus on the constraints which might reveal the steps
+**** TODO Decision points, how that reduces the input 
+** Datastructure to use
+*** Array, Matrix, HashMap
+*** TODO Datastructures and its properties
+**** Insert, update and select Big O
+** Iterative solution or recursive solution
+*** If iterative solution, how many loops, variable names etc,
+** If recursive solution
+*** Base Case
+*** Exit case
+*** How to move the base case
+** TODO Other types of problem solving (priority queues, heaps)
+** Write pseudo code
+*** Function, variables etc
+*** Walk through the steps to show how code works
+*** How code works for various inputs
+*** Include edge cases
+*** Show state for each steps
+** Explain time complexity and space complexity
+*** TODO For various data structures
+** Ask interviewer if you need adjust the solution to improve the complexity
+** Write code - use JavaScript
+* How i am going to prepare
+** Read crack code interview book (just coding section)
+** Focus on critical requirements (don't worry about dynamic programming)
+** Finish all the easy questions in leetcode
+** Practise should follow the interview style, all the steps, no direct writing of code
+** Get paid account for a month and practice fb questions in leetcode

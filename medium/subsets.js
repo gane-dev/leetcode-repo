@@ -1,7 +1,8 @@
 class Solution {
   constructor(nums) {
     this.output = [];
-    (this.n = nums.length), (this.k = 0);
+    this.n = nums.length;
+    this.k = 0;
     this.nums = nums;
   }
   backtrack(first, curr) {
@@ -21,4 +22,4 @@ class Solution {
 }
 const nums = [1, 2, 3];
 let cls = new Solution(nums);
-cls.subsets();
+console.log(cls.subsets());
