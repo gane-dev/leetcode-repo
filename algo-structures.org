@@ -1,0 +1,68 @@
+* Create mental map of algorithms and data structures
+** Array Vs ArrayList Vs Linked List
+*** Fixed size vs variable size
+*** Algorithms can use two pointer approach in both - you can get O(n) instead of two loops
+**** Example - Remove duplicates
+*** LinkedList can use dual pointer approach
+** Array Algorithms
+*** Search
+*** Sort
+**** O(NLogN) - Quick Sort or Quick Select
+***** Choose a pivot and split the array to sort or search - (Wrong pivot worst case O(n^2)
+***** kth smallest element - partition left or right, if position = k, return array element
+** Stack
+*** FIFO, 
+*** Implementation - push, pop, peek
+*** Recursion can be replaced by iteration with stacks
+** Queue
+*** Two ends
+*** Push, pop (poll), remove
+*** Used in Breadth First search
+** Trees
+*** Binary tree
+**** Two nodes
+**** Traversal, inorder, preorder, post order O(N) - 
+**** Insert, Select takes O(logN)
+*** Binary Search Tree
+**** Left nodes are less than root and right nodes greater that root
+**** Inorder traversal gives sorted array in descending order
+**** Full tree, complete tree
+**** Sometimes better than hash table - range queries, O(logN) for all operations
+** Graphs
+*** Directed
+*** Undirected
+*** Cycles - When there is a back edge - find by using DFS (if you revisit marked node)
+*** Representation 
+**** Adjacency List - ArrayList to store the next vertex
+**** Matrix - Issue with sparse matrix
+**** Shortest path algorithms
+** Trie
+*** To find prefix
+*** Use hashtable in everynode to store the next set of characters, special character to denote end of word
+*** Takes O(s) - string length to get the prefix
+** Heaps
+*** Stores min or max element at the top
+*** Add / remove takes O(LogN)
+** HashTabe
+*** O(1) - constant time for add, delete, search
+*** No sort option like tree
+* How to approach problem to create solution
+** Two Loops
+*** Use hashtable to count or find duplicates
+**** Longest substring without duplicates
+***** Save character and position in hashtable,
+***** if character exists, position - last time we have duplicate - longest substring
+*** Two pointer approach
+*** Remove duplicates (in place removal)
+*** Sum of elements (two sum, three sum equal to target)
+**** Improvement - use backtracking
+** Use recursion to get a simple solution
+*** two paths - robot movement from top to bottom (with only 2 moves allowed up or down)
+** Use backtracking for performance improvements (removes unused path)
+*** Permutation - ?
+** Improve solution by adding memoization (dynamic programming)
+*** Palindrome with a matrix
+**** Save one character palindrome in a array, 2 character and more than 2 in seperate loops
+**** 
+** Improve by using iteration (bottom up approach), improves space and speed
+** 
