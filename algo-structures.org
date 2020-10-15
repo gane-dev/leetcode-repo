@@ -4,6 +4,7 @@
 *** Algorithms can use two pointer approach in both - you can get O(n) instead of two loops
 **** Example - Remove duplicates
 *** LinkedList can use dual pointer approach
+*** Is Unique chars - use array of 128 elements, to store duplicate or not
 ** Array Algorithms
 *** Search
 *** Sort
@@ -14,6 +15,16 @@
 *** FIFO, 
 *** Implementation - push, pop, peek
 *** Recursion can be replaced by iteration with stacks
+*** Multiple stacks, Stack with min
+*** Stack with plates
+*** Queue via stacks
+**** One stack to add element to queue 
+**** One stack to pop element
+**** Before remove or peek, shiftStacks, move from new to old stack
+*** Sort (merge sort)
+**** three stack - left, right, reverse
+**** Compare left and right, push into new stack, at the end, reverse the stack by popping and inserting into reverse stack
+** 
 ** Queue
 *** Two ends
 *** Push, pop (poll), remove
@@ -23,11 +34,25 @@
 **** Two nodes
 **** Traversal, inorder, preorder, post order O(N) - 
 **** Insert, Select takes O(logN)
+**** First Common Ancestor
+***** Two nodes P and Q, for P and every ancestor of P, check q or q ancestors match
+***** If match return true
 *** Binary Search Tree
 **** Left nodes are less than root and right nodes greater that root
 **** Inorder traversal gives sorted array in descending order
 **** Full tree, complete tree
 **** Sometimes better than hash table - range queries, O(logN) for all operations
+**** Create minimal BST from sorted array
+***** Recursively set left child for elements from start to mid-1
+***** Recursively set right child for elements from mid+1 to end
+***** Middle element becomes root 
+***** Treenode structure (data, left, right, parent)
+**** Is Balanced
+***** recursively check the left and right height
+***** return max(left height, right height) + 1
+***** If diff(left height - right height) > 1 - return false
+**** Validate BST
+***** Recursively check (if root.data < left.data) , if right (root.data <= lastPrinted)
 ** Graphs
 *** Directed
 *** Undirected
@@ -36,6 +61,12 @@
 **** Adjacency List - ArrayList to store the next vertex
 **** Matrix - Issue with sparse matrix
 **** Shortest path algorithms
+*** Traversal
+**** BFS (path between nodes) - Add start element to queue and mark as visiting
+***** Remove first element from queue and get all adjacent
+***** If adjacent element is not visited, mark as visiting and add to queue
+***** After visiting all the adjacent elements, mark the current element as visited
+***** If 
 ** Trie
 *** To find prefix
 *** Use hashtable in everynode to store the next set of characters, special character to denote end of word
@@ -46,6 +77,13 @@
 ** HashTabe
 *** O(1) - constant time for add, delete, search
 *** No sort option like tree
+** LinkedList
+*** Remove dups using two pointers
+*** Return kth to last
+*** Loop detection - two pointers, 
+**** Slow and fast (fast at double the speed of slow)
+**** Break when slow = fast
+**** Start slow at head (fast at meeting point) and move one step, both will meet at loop 
 * How to approach problem to create solution
 ** Two Loops
 *** Use hashtable to count or find duplicates
@@ -66,3 +104,16 @@
 **** 
 ** Improve by using iteration (bottom up approach), improves space and speed
 ** 
+* Recursion
+** Towers of Hanoi
+*** movedisks (quantity, destination, buffer)
+**** movedisks(quantity-1,buffer, destination)
+**** moveTopTo(destination)
+***** pop (Tower is a stack)
+***** add popped disk to destination
+**** buffer.moveDisks(quantity-1, destination, source)
+** Permutation (string)
+*** loop through from 0 to n-1
+*** take each character, and loop through remaining characters with recursion
+*** exit clause (length of remainig characters in each recursion)
+*** Add n-character permutation to result array
