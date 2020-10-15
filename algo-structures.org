@@ -117,3 +117,16 @@
 *** take each character, and loop through remaining characters with recursion
 *** exit clause (length of remainig characters in each recursion)
 *** Add n-character permutation to result array
+** Permuation with dups - remove dups by using a HashMap
+** Paranthesis
+*** Exit clause - remaining left = 0 or rightRemaining less than left remaining
+*** when left index and right index are zero, add string to result
+*** set str[indx] ='(' and recurse left -1
+*** set str[indx] =')' and recurse right -1
+** Coin change - how many ways sum coins to total
+*** Exit clause - last coin, return 1 if equals to zero after adding last coin or return 0
+*** Try 1 coin (recurse for remaining amount), same with 2,3 etc - 
+**** if you choose 2nd coin do we check the first coin (denom) ? - no need we already check the first denom with remaining
+*** Save temp results using matrix
+*** Return mat[total][index], save if not present
+
